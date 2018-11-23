@@ -1,32 +1,51 @@
-# Prerequisites
-*.d
+#include <iostream>
+using namespace std;
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+int main ()
+{
 
-# Precompiled Headers
-*.gch
-*.pch
+    jeszczeraz:
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+    cout<<"Czego pan sobie zyczy? 1. kurczaczek, 2. wolowinka, 3. jagniecinka"<<endl;
+    int y;
+    cin>>y;
+    while (!(cin>>y))
+    {
+        cout<<"Zly format. Wybierz ponownie"<<endl;
+        cin.clear();
+        cin.sync();
+        goto jeszczeraz;
+    }
 
-# Fortran module files
-*.mod
-*.smod
+    switch(y)
+    {
+        case 1:
+        cout<<"Wybral pan kurczaczka"<<endl;
+        break;
+        case 2:
+        cout<<"Wybral pan wolowinke"<<endl;
+        break;
+        case 3:
+        cout<<"Wybral pan spierdolinke"<<endl;
+        break;
+        default:
+        cout<<"Wrong choice"<<endl;
+        break;
+    }
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
 
-# Executables
-*.exe
-*.out
-*.app
+
+        cout<<"Jeszcze raz? [y/n]"<<endl;
+        string wybor;
+        cin>>wybor;
+        if (wybor=="y") goto jeszczeraz;
+        else
+        {
+            cout<<"Starczy tego gruby smieciu"<<endl;
+        }
+
+
+
+
+
+}
